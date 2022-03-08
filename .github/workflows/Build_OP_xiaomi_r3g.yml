@@ -3,19 +3,17 @@
 name: Build_OP_xiaomi_r3g
 
 on: 
-  release:
-    types: [published]
-
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
+    paths: 
+      - logs/xiaomi_r3g.md
 
   #schedule:
   #  - cron: 0 8 * * 5
   
-  watch:
-    types: [started]
-
+  #watch:
+  #  types: [started]
 jobs:
   build:
     runs-on: ubuntu-latest
