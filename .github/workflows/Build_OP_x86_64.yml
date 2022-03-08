@@ -2,12 +2,12 @@
 
 name: Build_x86_64
 
-on:
+on: 
   push:
-    branches:    
-      - 'master'
-    paths:
-      - 'logs/x86_64.md'
+    branches: 
+      - main
+    paths: 
+      - logs/x86_64.md.md
 
   #schedule:
   #  - cron: 0 8 * * 5
