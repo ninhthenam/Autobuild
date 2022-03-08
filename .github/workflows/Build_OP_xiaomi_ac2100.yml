@@ -3,18 +3,17 @@
 name: Build_OP_xiaomi_ac2100
 
 on: 
-  release:
-    types: [published]
-
-  #push:
-  #  branches: 
-  #    - master
+  push:
+    branches: 
+      - master
+    paths: 
+      - logs/xiaomi_ac2100.md
 
   #schedule:
   #  - cron: 0 8 * * 5
   
-  watch:
-    types: [started]
+  #watch:
+  #  types: [started]
 
 jobs:
   build:
