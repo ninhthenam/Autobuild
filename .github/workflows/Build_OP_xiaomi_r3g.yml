@@ -5,7 +5,7 @@ name: Build_OP_xiaomi_r3g
 on: 
   push:
     branches: 
-      - master
+      - main
     paths: 
       - logs/xiaomi_r3g.md
 
