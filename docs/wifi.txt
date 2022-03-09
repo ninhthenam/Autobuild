@@ -1,0 +1,33 @@
+# 修改开源驱动wifi名称
+sed -i 's/OpenWrt/ZTE-E8820S-$/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+# 修改闭源驱动2G wifi名称
+sed -i 's/OpenWrt_2G/ZTE-E8820S/g' package/lean/mt/drivers/mt_wifi/files/mt7603.dat
+
+# 修改闭源驱动5G wifi名称
+sed -i 's/OpenWrt_5G/ZTE-E8820S-5G/g' package/lean/mt/drivers/mt_wifi/files/mt7612.dat
+
+
+wifi_name='RR'
+wifi_encryption='psk2'
+wifi_password='23456789DDop'
+
+echo "修改wifi名称"
+sed -i "s/OpenWrt/$wifi_name/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
+echo "修改wifi加密方式"
+sed -i "s/none/$wifi_encryption/g" package/kernel/mac80211/files/lib/wifi/mac80211.sh
+echo "修改wifi加密密码"
+sed -i "/set wireless.default_radio${devidx}.encryption=none/aset wireless.default_radio${devidx}.key=$wifi_password" package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+
+    - name: Load custom configuration - wifi
+      env:
+        WIFI_FILE: 'mac80211.sh'
+      run: |
+        [ -e $WIFI_FILE ] && mv $WIFI_FILE openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+
+
+			set wireless.default_radio${devidx}.ssid=RR
+			set wireless.default_radio${devidx}.encryption=psk2
+			set wireless.default_radio${devidx}.key=23456789DDop
