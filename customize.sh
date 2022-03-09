@@ -29,8 +29,8 @@ sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/conf
 
 if [ $delete_bootstrap ]; then
   echo "去除默认bootstrap主题"
-  sed -i '/\+luci-theme-bootstrap/d' feeds/luci/collections/luci/Makefile
-  sed -i '/\+luci-theme-bootstrap/d' package/feeds/luci/luci/Makefile
-  sed -i '/CONFIG_PACKAGE_luci-theme-bootstrap=y/d' .config
-  sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
+  sed -i '/\+luci-theme-bootstrap/d' openwrt/feeds/luci/collections/luci/Makefile
+  sed -i '/\+luci-theme-bootstrap/d' openwrt/package/feeds/luci/luci/Makefile
+  sed -i '/CONFIG_PACKAGE_luci-theme-bootstrap=y/d' openwrt/.config
+  sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' openwrt/feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 fi
