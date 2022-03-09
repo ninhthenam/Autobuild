@@ -82,11 +82,13 @@ jobs:
         rm -rf luci-theme-argon
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
         
-    - name: Configuration Customization - Build_Xiaomi_R3g
+    - name: Configuration Customization - Build_xiaomi_r3g
       env:
         CONFIG_FILE: 'xiaomi_r3g.config'
+        BANNER_FILE: 'banner'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+        [ -e $BANNER_FILE ] && mv $BANNER_FILE openwrt/package/base-files/files/etc/banner
         chmod +x ./customize.sh && ./customize.sh
         cd openwrt && make defconfig
         
