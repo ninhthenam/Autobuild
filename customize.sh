@@ -12,7 +12,7 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 #3. Replace with JerryKuKu’s Argon
 #rm openwrt/package/lean/luci-theme-argon -rf
 
-命令
+# 命令
 echo "修改机器名称"
 sed -i "s/OpenWrt/$device_name/g" openwrt/package/base-files/files/bin/config_generate
 
