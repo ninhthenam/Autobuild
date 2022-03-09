@@ -1,0 +1,32 @@
+env:
+  T_NAME: "H-Wrt" # 设备名字 (op编译慢所以直接单个的编译)
+  UPLOAD_PACKAGES_DIR: true # 是否导出bin文件
+
+      - name: Organize Firmware # 8. 整理固件包
+        if: success()
+        run: |
+          cd ./openwrt/bin/targets/*/*
+          rm -rf packages
+          echo "::set-env name=FILE_NAME::$T_NAME-$(date "+%Y%m%d")"   # 文件名
+          echo "::set-env name=FIRMWARE::$PWD"                         # Firmware 路径
+ 
+      - name: Organize Packages # 9. 整理插件包
+        if: success()
+        run: |
+          cd ./openwrt/bin/packages
+          echo "::set-env name=PACKAGES_PATH::$PWD"                    # 插件包目录文件路径
+
+      - name: Upload Packages Directory # 10. 导出插件包目录
+        uses: actions/upload-artifact@master
+        if: env.UPLOAD_PACKAGES_DIR == 'true' && success()
+        with:
+          name: OpenWrt-${{env.FILE_NAME}}-Packages
+          path: ${{ env.PACKAGES_PATH }}
+
+      - name: Upload Firmware Directory # 11. 导出固件目录
+        uses: actions/upload-artifact@master
+        if: success()
+        with:
+          name: OpenWrt-${{env.FILE_NAME}}
+          path: ${{ env.FIRMWARE }}
+          
