@@ -1,4 +1,4 @@
-# AutoBuild-OpenWrt-simple
+# AutoBuild-OpenWrt-Simple
 
 H-Wrt
 
