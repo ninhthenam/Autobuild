@@ -4,15 +4,11 @@ utc_name='Asia\/Shanghai'
 delete_bootstrap=true
 default_theme='argon'
 
-
 #1. Modify default IP
 sed -i 's/192.168.1.1/10.0.1.1/g' openwrt/package/base-files/files/bin/config_generate
 
 #2. Clear the login password
 sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-settings/files/zzz-default-settings
-
-#3. Replace with JerryKuKu’s Argon
-#rm openwrt/package/lean/luci-theme-argon -rf
 
 # 命令
 echo "修改机器名称"
