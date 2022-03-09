@@ -7,7 +7,7 @@ on:
     branches: 
       - main
     paths: 
-      - logs/x86_64.md.md
+      - logs/x86_64.md
 
   #schedule:
   #  - cron: 0 8 * * 5
