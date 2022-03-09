@@ -18,6 +18,6 @@ _    _       __          __     _
 
 - [大雕 源码仓库](https://github.com/coolsnowwolf/lede.git)
 - [esir 自动编译](https://github.com/esirplayground/AutoBuild-OpenWrt.git)
-- [vernesong的OpenClash] https://github.com/vernesong/OpenClash.git
-- [rufengsuixing的adguardhome]https://github.com/rufengsuixing/luci-app-adguardhome.git
-- [jerrykuku的luci-theme-argon]https://github.com/jerrykuku/luci-theme-argon.git
+- [OpenClash 源码] https://github.com/vernesong/OpenClash.git © vernesong
+- [adguardhome 源码]https://github.com/rufengsuixing/luci-app-adguardhome.git ©rufengsuixing
+- [luci-theme-argon 源码]https://github.com/jerrykuku/luci-theme-argon.git ©jerrykuku
