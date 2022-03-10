@@ -6,8 +6,8 @@ sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.//g' openwrt/package/lean/default-se
 
 device_name='H-Wrt'
 echo "修改机器名称"
-sed -i "s/OpenWrt/$device_name/g" ./package/base-files/files/bin/config_generate
+sed -i "s/OpenWrt/$device_name/g" openwrt/package/base-files/files/bin/config_generate
 
 wifi_name=$device_name
 echo "修改wifi名称"
-sed -i "s/OpenWrt/$wifi_name/g" ./package/kernel/mac80211/files/lib/wifi/mac80211.sh
+sed -i "s/OpenWrt/$wifi_name/g" openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
