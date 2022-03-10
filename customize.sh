@@ -14,4 +14,4 @@ sed -i "s/OpenWrt/$wifi_name/g" openwrt/package/kernel/mac80211/files/lib/wifi/m
 
 default_theme='argon'
 echo "修改默认主题"
-sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
+sed -i "s/bootstrap/$default_theme/g" openwrt/feeds/luci/modules/luci-base/root/etc/config/luci
