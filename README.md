@@ -12,7 +12,7 @@ _    _       __          __     _
 | ---------- | -------- | -------- |
 | 10.0.1.1   | root     |          |
 
-# 目录结构
+## 目录结构
 
 ```
 AutoBuild-OpenWrt-Simple
@@ -32,7 +32,7 @@ AutoBuild-OpenWrt-Simple
 
 ```
 
-# 感谢
+## 感谢
 
 - [大雕 源码仓库](https://github.com/coolsnowwolf/lede.git) ©coolsnowwolf
 - [esir 自动编译](https://github.com/esirplayground/AutoBuild-OpenWrt.git) ©esirplayground
