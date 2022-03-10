@@ -11,3 +11,7 @@ sed -i "s/OpenWrt/$device_name/g" openwrt/package/base-files/files/bin/config_ge
 wifi_name=$device_name
 echo "修改wifi名称"
 sed -i "s/OpenWrt/$wifi_name/g" openwrt/package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+default_theme='argon'
+echo "修改默认主题"
+sed -i "s/bootstrap/$default_theme/g" feeds/luci/modules/luci-base/root/etc/config/luci
