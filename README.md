@@ -1,7 +1,5 @@
 # AutoBuild-OpenWrt-Simple
 
-H-Wrt
-
 ```
 _    _       __          __     _
 | |  | |      \ \        / /    | |  
