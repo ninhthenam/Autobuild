@@ -1,6 +1,24 @@
 # AutoBuild-OpenWrt-Simple
 
 ```
+AutoBuild-OpenWrt-Simple
+├─ banner
+├─ customize.sh
+├─ docs
+│  ├─ wifi.txt
+│  └─ workflows.yml
+├─ logs
+│  ├─ x86_64.md
+│  ├─ xiaomi_ac2100.md
+│  └─ xiaomi_r3g.md
+├─ README.md
+├─ x86_64.config
+├─ xiaomi_ac2100.config
+└─ xiaomi_r3g.config
+
+```
+
+```
 _    _       __          __     _
 | |  | |      \ \        / /    | |  
 | |__| | ______\ \  /\  / /_ __ | |_ 
@@ -19,3 +37,4 @@ _    _       __          __     _
 - [OpenClash 源码](https://github.com/vernesong/OpenClash.git)  © vernesong
 - [adguardhome 源码](https://github.com/rufengsuixing/luci-app-adguardhome.git) ©rufengsuixing
 - [luci-theme-argon 源码](https://github.com/jerrykuku/luci-theme-argon.git) ©jerrykuku
+
