@@ -81,7 +81,7 @@ jobs:
         rm -rf luci-theme-argon
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
         
-    - name: Configuration Customization - Build_xiaomi_r3g_def
+    - name: Configuration Customization - Build_xiaomi_r3g
       env:
         CONFIG_FILE: 'xiaomi_r3g_def.config'
         BANNER_FILE: 'banner'
@@ -103,6 +103,26 @@ jobs:
       run: |
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
+
+    - name: Organize Firmware
+      if: success()
+      run: |
+        cd ./openwrt/bin/targets/*/*
+        rm -rf packages
+
+    - name: Upload Packages Directory
+      uses: actions/upload-artifact@master
+      if: success()
+      with:
+        name: OpenWrt-xiaomi_r3g_def-Packages
+        path: openwrt/bin/packages
+
+    - name: Upload Firmware Directory
+      uses: actions/upload-artifact@master
+      if: success()
+      with:
+        name: OpenWrt-xiaomi_r3g_def
+        path: openwrt/bin/targets/ramips/mt7621
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
