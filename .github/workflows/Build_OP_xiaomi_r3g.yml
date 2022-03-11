@@ -57,8 +57,6 @@ jobs:
         REPO_BRANCH: master
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
-        # cd openwrt
-        # echo "src-git ssrp https://github.com/fw876/helloworld.git" >> ./feeds.conf.default
 
     - name: Update & Install feeds
       working-directory: ./openwrt
@@ -66,6 +64,7 @@ jobs:
         ./scripts/feeds update -a
         ./scripts/feeds install -a
         ./scripts/feeds install -a
+        
     - name: Import external feeds - openclash
       working-directory: ./openwrt
       run: |
