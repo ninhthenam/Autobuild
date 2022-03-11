@@ -105,6 +105,26 @@ jobs:
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
         
+    - name: Organize Firmware
+      if: success()
+      run: |
+        cd ./openwrt/bin/targets/*/*
+        rm -rf packages
+
+    - name: Upload Packages Directory
+      uses: actions/upload-artifact@master
+      if: success()
+      with:
+        name: OpenWrt-x86_64-Packages
+        path: openwrt/bin/packages
+
+    - name: Upload Firmware Directory
+      uses: actions/upload-artifact@master
+      if: success()
+      with:
+        name: OpenWrt-x86_64
+        path: openwrt/bin/targets/x86/64
+
     - name : Upload artifact
       uses: actions/upload-artifact@master
       with:
