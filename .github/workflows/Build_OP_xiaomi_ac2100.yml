@@ -82,9 +82,9 @@ jobs:
         rm -rf luci-theme-argon
         git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
          
-    - name: Configuration Customization - Build_Redmi_AC2100
+    - name: Configuration Customization - Build_xiaomi_ac2100
       env:
-        CONFIG_FILE: 'redmi_ac2100.config'
+        CONFIG_FILE: 'xiaomi_ac2100.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
         chmod +x ./customize.sh && ./customize.sh
@@ -102,6 +102,26 @@ jobs:
       run: |
         echo -e "$(nproc) thread build."
         make -j$(nproc) V=s
+
+    - name: Organize Firmware
+      if: success()
+      run: |
+        cd ./openwrt/bin/targets/*/*
+        rm -rf packages
+
+    - name: Upload Packages Directory
+      uses: actions/upload-artifact@master
+      if: success()
+      with:
+        name: OpenWrt-xiaomi_ac2100-Packages
+        path: openwrt/bin/packages
+
+    - name: Upload Firmware Directory
+      uses: actions/upload-artifact@master
+      if: success()
+      with:
+        name: OpenWrt-xiaomi_ac2100
+        path: openwrt/bin/targets/ramips/mt7621
 
     - name : Upload artifact
       uses: actions/upload-artifact@master
