@@ -67,22 +67,6 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
         
-    - name: Import external feeds - openclash
-      working-directory: ./openwrt
-      run: |
-        git clone https://github.com/vernesong/OpenClash.git package/openclash
-    
-    - name: Import external feeds - luci-app-adguardhome
-      working-directory: ./openwrt
-      run: |
-        git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
-  
-    - name: Import external feeds - JerryKuKu Argon
-      working-directory: ./openwrt/package/lean
-      run: |
-        rm -rf luci-theme-argon
-        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
-
     - name: Configuration Customization - Build_k2_def
       env:
         CONFIG_FILE: 'k2_def.config'
