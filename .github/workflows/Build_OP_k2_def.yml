@@ -58,6 +58,12 @@ jobs:
         REPO_BRANCH: v18.06.9
       run: |
         git clone --depth 1 $REPO_URL -b $REPO_BRANCH openwrt
+
+    - name: Cache 测试缓存
+      uses: klever1988/cachewrtbuild@main
+      with:
+        ccache: 'true'
+        prefix: ./openwrt
         
     - name: Update & Install feeds
       working-directory: ./openwrt
@@ -71,7 +77,8 @@ jobs:
         CONFIG_FILE: 'k2_def.config'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
-        cd openwrt && make defconfig
+        cd openwrt
+        echo -e 'CONFIG_DEVEL=y\nCONFIG_CCACHE=y' >> .config && make defconfig
         
     - name: Download package
       working-directory: ./openwrt
