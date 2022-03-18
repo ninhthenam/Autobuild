@@ -20,10 +20,7 @@ AutoBuild-OpenWrt-Simple
 ├─ customize.sh
 ├─ docs
 │  └─ wifi.txt
-├─ k2_def.config
 ├─ logs
-│  ├─ k2.md
-│  ├─ test.md
 │  ├─ x86_64.md
 │  ├─ xiaomi_ac2100.md
 │  └─ xiaomi_r3g.md
@@ -58,6 +55,3 @@ AutoBuild-OpenWrt-Simple
 - [adguardhome 源码](https://github.com/rufengsuixing/luci-app-adguardhome.git) ©rufengsuixing
 - [luci-theme-argon 源码](https://github.com/jerrykuku/luci-theme-argon.git) ©jerrykuku
 - [缓存加速编译](https://github.com/klever1988/cachewrtbuild) ©klever1988
-
-
-
