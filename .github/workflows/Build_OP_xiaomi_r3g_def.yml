@@ -3,14 +3,14 @@
 name: Build_OP_xiaomi_r3g_def
 
 on: 
-  push:
-    branches: 
-      - main
-    paths: 
-      - logs/x86_64.md
+  #push:
+  #  branches: 
+  #    - main
+  #  paths: 
+  #    - logs/xiaomi_r3g.md
 
-  #schedule:
-  #  - cron: 0 8 * * 1
+  schedule:
+    - cron: 0 8 * * 1
   
   #watch:
   #  types: [started]
