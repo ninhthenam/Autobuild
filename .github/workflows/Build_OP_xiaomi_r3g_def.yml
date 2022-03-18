@@ -118,12 +118,12 @@ jobs:
         cd ./openwrt/bin/targets/*/*
         rm -rf packages
 
-    - name: Upload Packages Directory
-      uses: actions/upload-artifact@master
-      if: success()
-      with:
-        name: OpenWrt-xiaomi_r3g_def-Packages
-        path: openwrt/bin/packages
+    #- name: Upload Packages Directory
+    #  uses: actions/upload-artifact@master
+    #  if: success()
+    #  with:
+    #    name: OpenWrt-xiaomi_r3g_def-Packages
+    #    path: openwrt/bin/packages
 
     - name: Upload Firmware Directory
       uses: actions/upload-artifact@master
@@ -132,8 +132,8 @@ jobs:
         name: OpenWrt-xiaomi_r3g_def
         path: openwrt/bin/targets/ramips/mt7621
 
-    - name : Upload artifact
-      uses: actions/upload-artifact@master
-      with:
-        name: OpenWrt
-        path: openwrt/bin
+    #- name : Upload artifact
+    #  uses: actions/upload-artifact@master
+    #  with:
+    #    name: OpenWrt
+    #    path: openwrt/bin
