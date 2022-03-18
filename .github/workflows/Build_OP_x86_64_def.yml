@@ -3,14 +3,14 @@
 name: Build_x86_64_def
 
 on: 
-  push:
-    branches: 
-      - main
-    paths: 
-      - logs/x86_64.md
+  #push:
+  #  branches: 
+  #    - main
+  #  paths: 
+  #    - logs/x86_64.md
 
-  #schedule:
-  #  - cron: 0 8 * * 5
+  schedule:
+    - cron: 0 8 * * 5
   
   #watch:
   #  types: [started]
