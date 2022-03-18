@@ -10,7 +10,7 @@ on:
   #    - logs/x86_64.md
 
   schedule:
-    - cron: 0 8 * * 5
+    - cron: 0 8 * * 1
   
   #watch:
   #  types: [started]
