@@ -86,7 +86,7 @@ jobs:
       working-directory: ./openwrt/package/lean
       run: |
         rm -rf luci-theme-argon
-        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git
+        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon-18.06
          
     - name: Configuration Customization - Build_xiaomi_ac2100_def
       env:
