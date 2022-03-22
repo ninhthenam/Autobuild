@@ -83,9 +83,9 @@ jobs:
         git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
         
     - name: Import external feeds - JerryKuKu Argon
-      working-directory: ./openwrt/package/lean
+      working-directory: ./openwrt
       run: |
-        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git luci-theme-argon-18.06
+        git clone -b 18.06 https://github.com/jerrykuku/luci-theme-argon.git package/lean/luci-theme-argon-18.06
         
     - name: Configuration Customization - Build_xiaomi_r3g
       env:
