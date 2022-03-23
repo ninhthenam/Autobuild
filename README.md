@@ -18,6 +18,7 @@
 
 ## 目录结构
 
+
 ```
 AutoBuild-OpenWrt-Simple
 ├─ banner
@@ -25,16 +26,22 @@ AutoBuild-OpenWrt-Simple
 ├─ docs
 │  └─ wifi.txt
 ├─ logs
+│  ├─ rpi4_64.md
 │  ├─ x86_64.md
 │  ├─ xiaomi_ac2100.md
-│  └─ xiaomi_r3g.md
+│  ├─ xiaomi_r3g.md
+│  └─ xiaomi_r4a.md
 ├─ README.md
+├─ rpi4_64.config
+├─ rpi4_64_def.config
 ├─ x86_64.config
 ├─ x86_64_def.config
 ├─ xiaomi_ac2100.config
 ├─ xiaomi_ac2100_def.config
 ├─ xiaomi_r3g.config
-└─ xiaomi_r3g_def.config
+├─ xiaomi_r3g_def.config
+├─ xiaomi_r4a.config
+└─ xiaomi_r4a_def.config
 
 ```
 
