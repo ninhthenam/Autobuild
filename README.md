@@ -163,3 +163,30 @@ AutoBuild-OpenWrt-Simple
 └─ xiaomi_r4a_def.config
 
 ```
+```
+AutoBuild-OpenWrt-Simple
+├─ banner
+├─ customize.sh
+├─ docs
+│  └─ wifi.txt
+├─ logs
+│  ├─ openwrt.md
+│  ├─ rpi4_64.md
+│  ├─ x86_64.md
+│  ├─ xiaomi_ac2100.md
+│  ├─ xiaomi_r3g.md
+│  └─ xiaomi_r4a.md
+├─ openwrt.config
+├─ README.md
+├─ rpi4_64.config
+├─ rpi4_64_def.config
+├─ x86_64.config
+├─ x86_64_def.config
+├─ xiaomi_ac2100.config
+├─ xiaomi_ac2100_def.config
+├─ xiaomi_r3g.config
+├─ xiaomi_r3g_def.config
+├─ xiaomi_r4a.config
+└─ xiaomi_r4a_def.config
+
+```
