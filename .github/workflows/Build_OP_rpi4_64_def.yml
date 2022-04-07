@@ -3,6 +3,9 @@
 name: Build_rpi4_64_def
 
 on: 
+
+  workflow_dispatch:
+
   #push:
   #  branches: 
   #    - main

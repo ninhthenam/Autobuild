@@ -3,6 +3,9 @@
 name: Build_xiaomi_r4a_def
 
 on: 
+
+  workflow_dispatch:
+
   # push:
   #   branches: 
   #     - main

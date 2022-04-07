@@ -3,6 +3,9 @@
 name: Build_OP_xiaomi_ac2100_def
 
 on: 
+
+  workflow_dispatch:
+
   #push:
   #  branches: 
   #    - main
