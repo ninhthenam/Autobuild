@@ -9,8 +9,8 @@ on:
   #  paths: 
   #    - logs/xiaomi_ac2100.md
 
-  schedule:
-    - cron: 0 8 * * 1
+  # schedule:
+  #   - cron: 0 8 * * 1
   
   #watch:
   #  types: [started]

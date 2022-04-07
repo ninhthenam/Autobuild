@@ -3,11 +3,11 @@
 name: Build_xiaomi_r4a_def
 
 on: 
-  push:
-    branches: 
-      - main
-    paths: 
-      - logs/xiaomi_r4a.md
+  # push:
+  #   branches: 
+  #     - main
+  #   paths: 
+  #     - logs/xiaomi_r4a.md
 
   #schedule:
   #  - cron: 0 8 * * 5
