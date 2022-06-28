@@ -73,11 +73,9 @@
    ```
 
 
-4. 
+4. 这里简单理解为更新 openwrt 这个系统的软件源
 
    ```
-   这里简单理解为更新 openwrt 这个系统的软件源
-   
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    ./scripts/feeds install -a
@@ -86,7 +84,7 @@
    
    make menuconfig
    ```
-
+   
 5. `make -j8 download V=s`  下载dl库（国内请尽量全局科学上网）
 
 6. 输入 `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
