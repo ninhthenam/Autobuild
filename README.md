@@ -20,14 +20,16 @@
 
 ### 本地编译教程
 
-1. 安装系统，推荐 Ubuntu 20.04 LTS x64（全程使用非root用户）
+1. 安装系统
+
+   推荐 Ubuntu 20.04 LTS x64（全程使用非root用户）
 
 2. 安装依赖
 
-   更换软件源,清华源官网：https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/
+   更换软件源,[清华源官网](https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/)
 
    ```
-   # 进行源码备份.
+     安装依赖，命令行输入# 进行源码备份.
    sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
    # 进行源列表的修改
    sudo vi /etc/apt/sources.list
@@ -53,16 +55,23 @@
    sudo cat /etc/apt/sources.list
    # 执行更新列表
    sudo apt-get update 
+   
+   # 更新软件源为最新版，命令行输入
+   sudo apt-get update
+   
+   # 安装依赖，命令行输入
+   sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
    ```
 
-     更新软件源为最新版，命令行输入 `sudo apt-get update` 
-
-     安装依赖，命令行输入 `sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync`
-
-3. 使用 `git clone https://github.com/coolsnowwolf/lede` 命令下载好源代码
+3. 使用 git下载好源代码
 
    ```
+   # 执行以下任何一个即可，推荐使用加速地址，如过感觉速度慢，可以更换一个
+   
+   # 原git clone 地址
    git clone https://github.com/coolsnowwolf/lede.git
+   
+   # 加速 git clone 地址
    git clone https://github.do/https://github.com/coolsnowwolf/lede.git
    git clone https://api.mtr.pub/coolsnowwolf/lede.git
    git clone https://hub.fastgit.xyz/coolsnowwolf/lede.git
@@ -73,18 +82,22 @@
    ```
 
 
-4. 这里简单理解为更新 openwrt 这个系统的软件源
+4. 更新 openwrt 系统的软件源
 
    ```
+   cd ./lede
    ./scripts/feeds update -a
    ./scripts/feeds install -a
    ./scripts/feeds install -a
-   
-   打开配置菜单、在这个界面你可以，按照自己的要求来配置属于你自己的openwrt
-   
-   make menuconfig
    ```
    
+5. 配置编译选项
+
+   ```
+   # 打开配置菜单、在这个界面你可以，按照自己的要求来配置属于你自己的openwrt
+   make menuconfig
+   ```
+
 5. `make -j8 download V=s`  下载dl库（国内请尽量全局科学上网）
 
 6. 输入 `make -j1 V=s` （-j1 后面是线程数。第一次编译推荐用单线程）即可开始编译你要的固件了。
@@ -99,7 +112,7 @@
 
 1. 安装系统，推荐 Ubuntu 20.04 LTS x64（全程使用非root用户）
 
-2. 安装依赖(参考本地编译教程)
+2. 安装依赖
 
 3. 克隆源码、进入目录、更新 openwrt 这个系统的软件源（同上）
 
