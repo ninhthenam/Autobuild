@@ -108,7 +108,7 @@
 
 ### 云编译教程
 
-云编译：编译工作由GitHub 的 Gitflow Workflow（github工作流）完成
+云编译：编译工作由[GitHub](https://github.com/) 的 Gitflow Workflow（github工作流）完成
 
 1. 安装系统，推荐 Ubuntu 20.04 LTS x64（全程使用非root用户）
 
