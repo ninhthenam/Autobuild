@@ -209,7 +209,6 @@ AutoBuild-OpenWrt-Simple        //
 ├─ xiaomi_r3g_def.config        //
 ├─ xiaomi_r4a.config            //
 └─ xiaomi_r4a_def.config        //
-
 ```
 
 ## 感谢
@@ -220,5 +219,3 @@ AutoBuild-OpenWrt-Simple        //
 - [adguardhome 源码](https://github.com/rufengsuixing/luci-app-adguardhome.git) ©rufengsuixing
 - [luci-theme-argon 源码](https://github.com/jerrykuku/luci-theme-argon.git) ©jerrykuku
 - [缓存加速编译](https://github.com/klever1988/cachewrtbuild) ©klever1988
-
-
