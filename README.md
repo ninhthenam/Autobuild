@@ -1,4 +1,4 @@
-# AutoBuild-OpenWrt-Simple
+#                           AutoBuild-OpenWrt-Simple
 
 ```
  _    _       __          __     _
@@ -66,7 +66,7 @@ https://github.com/390014043/AutoBuild-OpenWrt-Simple
    sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch python3 python2.7 unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler g++-multilib antlr3 gperf wget curl swig rsync
    ```
 
-3. 使用 git下载好源代码
+3. 使用 git克隆源码
 
    ```
    # 执行以下任何一个即可，推荐使用加速地址，如过感觉速度慢，可以更换一个
@@ -126,7 +126,7 @@ https://github.com/390014043/AutoBuild-OpenWrt-Simple
 
 2. 安装依赖
 
-3. 克隆源码、进入目录、更新 openwrt 这个系统的软件源（同上）
+3. 使用 git克隆源码、更新 openwrt 系统的软件源（同上）
 
    此过程由于需要从GitHub下载、更新源码，考虑到大部分小伙伴网络情况不一
 
@@ -142,7 +142,7 @@ tar zxvf lede.tar.gz
 # 解压后更新源码（注意路径）
 cd ~/lede
 git pull
-cd ~/lede/package/openclash
+cd ~/lede/package/OpenClash
 git pull
 cd ~/lede/package/luci-app-adguardhome
 git pull
