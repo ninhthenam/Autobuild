@@ -1,7 +1,7 @@
-git="https://github.com/"
+git="https://mirror.ghproxy.com/https://github.com/"
 
 echo "开始安装git"
-apt update && apt install git
+sudo apt update && sudo apt install git vim -y
 echo "拉取源码"
 git clone ${git}coolsnowwolf/lede.git ~/lede
 git clone ${git}jerrykuku/luci-theme-argon ~/lede/package/lean/luci-theme-argon-18.06
