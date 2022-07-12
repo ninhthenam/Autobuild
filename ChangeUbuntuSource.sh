@@ -11,12 +11,23 @@ hw_arch=$(uname -m)
 # echo "hardware Architecture = $hw_arch"
 echo "系统版本为 $os_name-$release_num $code_name $hw_arch"
 
-a=10
-b=20
 
 if [ $os_name = "Ubuntu" ]
 then
     echo "系统版本为 $os_name-$release_num $code_name $hw_arch"
+    if [ $release_num = "20.04" ]
+    then
+        echo "系统版本为 $os_name-$release_num $code_name $hw_arch"
+        echo "系统版本为 $os_name-$release_num $code_name $hw_arch"
+    elif [ $os_name = "Centos" ]
+    then
+        echo "系统版本为 $os_name-$release_num $code_name $hw_arch"
+    elif [ $os_name = "Debian" ]
+    then
+        echo "系统版本为 $os_name-$release_num $code_name $hw_arch"
+    else
+    echo "unkonw"
+    fi
 elif [ $os_name = "Centos" ]
 then
     echo "系统版本为 $os_name-$release_num $code_name $hw_arch"
