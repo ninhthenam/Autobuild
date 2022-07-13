@@ -220,6 +220,12 @@ cd ./lede
 ./scripts/feeds install -a
 ```
 
+### DD更新系统
+
+```
+dd if=/tmp/upload/openwrt.img of=/dev/sda
+```
+
 ## 目录结构
 
 ```
