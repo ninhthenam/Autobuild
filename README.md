@@ -205,7 +205,7 @@ git clone https://github.com/coolsnowwolf/lede.git ~/lede \
 ### 拉取最新源码
 
 ```
-cd ~/lede %% git pull \
+cd ~/lede && git pull \
 cd ~/lede/package/OpenClash && git pull \
 cd ~/lede/package/luci-app-adguardhome && git pull \
 cd ~/lede/package/lean/luci-theme-argon-18.06 && git pull
