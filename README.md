@@ -191,6 +191,35 @@ git pull
 
 banner、customize.sh、docs/wifi.txt、Build_OP_openwrt.yml等文件等着大家去探索哦
 
+## 方便自己的一键系列
+
+### 拉取源码
+
+```
+git clone https://github.com/coolsnowwolf/lede.git ~/lede \
+&& git clone https://github.com/vernesong/OpenClash.git ~/lede/package/OpenClash \
+&& git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ~/lede/package/luci-app-adguardhome \
+&& git clone https://github.com/jerrykuku/luci-theme-argon.git ~/lede/package/lean/luci-theme-argon-18.06git clone
+```
+
+### 拉取最新源码
+
+```
+cd ~/lede %% git pull \
+cd ~/lede/package/OpenClash && git pull \
+cd ~/lede/package/luci-app-adguardhome && git pull \
+cd ~/lede/package/lean/luci-theme-argon-18.06 && git pull
+```
+
+### 更新 openwrt 系统的软件源
+
+```
+cd ./lede
+./scripts/feeds update -a
+./scripts/feeds install -a
+./scripts/feeds install -a
+```
+
 ## 目录结构
 
 ```
