@@ -199,7 +199,7 @@ banner、customize.sh、docs/wifi.txt、Build_OP_openwrt.yml等文件等着大�
 git clone https://github.com/coolsnowwolf/lede.git ~/lede \
 && git clone https://github.com/vernesong/OpenClash.git ~/lede/package/OpenClash \
 && git clone https://github.com/rufengsuixing/luci-app-adguardhome.git ~/lede/package/luci-app-adguardhome \
-&& git clone https://github.com/jerrykuku/luci-theme-argon.git ~/lede/package/lean/luci-theme-argon-18.06git clone
+&& git clone https://github.com/jerrykuku/luci-theme-argon.git ~/lede/package/lean/luci-theme-argon-18.06
 ```
 
 ### 拉取最新源码
