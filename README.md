@@ -226,6 +226,78 @@ cd ./lede
 dd if=/tmp/upload/openwrt.img of=/dev/sda
 ```
 
+## 使用docker编译与云编译
+
+### docker 安装
+
+使用官方安装脚本自动安装
+
+```
+curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
+```
+
+### docker 镜像加速
+
+使用docker的时候，总是需要去search镜像，使用国外的源下载太慢，还有诸多的限制，可以使用阿里云进行加速，操作如下：
+
+1. 打开阿里云控制台，没有的可以用淘宝账号或者支付宝账号直接登录
+
+https://cr.console.aliyun.com/cn-hangzhou/instances/mirrors
+
+打开容器镜像服务，镜像加速器，复制加速地址后，按照第二个红框所示，完成配置。
+
+![img](https://gitee.com/Huzy_led/shoulders-of-giants/raw/master/imgs/1592465-20190721112607382-476284117.png)
+
+2. 重启docker
+
+systemctl daemon-reload
+
+systemctl restart docker
+
+OK!加速完成，嗖嗖嗖！！！
+
+### docker 镜像拉取
+
+```
+# 镜像比较大请大家耐心等待
+docker pull hzyyd/ubuntu-20.04-lede
+
+docker run -itd --name ubuntu-20.04-lede hzyyd/ubuntu-20.04-lede
+```
+
+### 进入docker容器
+
+```
+docker exec -it ubuntu-20.04-lede bash
+
+# 推出docker容器
+按住ctrl，然后按d，即可推出容器
+```
+
+### docker容器目录
+
+```
+# 首先解压lede源码
+cd ~ && tar zxvf lede.tgz
+
+# 更新源码
+cd ~/lede && git pull \
+cd ~/lede/package/OpenClash && git pull \
+cd ~/lede/package/luci-app-adguardhome && git pull \
+cd ~/lede/package/lean/luci-theme-argon-18.06 && git pull
+
+# 然后就可以向上面一样愉快的编译与云编译了
+
+# lede所在目录
+~/lede && git pull
+# OpenClash所在目录
+~/lede/package/OpenClash
+# luci-app-adguardhome所在目录
+~/lede/package/luci-app-adguardhome
+# luci-theme-argon-18.06所在目录
+~/lede/package/lean/luci-theme-argon-18.06
+```
+
 ## 目录结构
 
 ```
