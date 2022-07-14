@@ -280,10 +280,16 @@ docker exec -it ubuntu-20.04-lede bash
 # 首先解压lede源码
 cd ~ && tar zxvf lede.tgz
 
+# 添加 git 安全目录
+git config --global --add safe.directory /root/lede
+git config --global --add safe.directory /root/lede/package/OpenClash
+git config --global --add safe.directory /root/lede/package/luci-app-adguardhome
+git config --global --add safe.directory /root/lede/package/lean/luci-theme-argon-18.06
+
 # 更新源码
-cd ~/lede && git pull \
-cd ~/lede/package/OpenClash && git pull \
-cd ~/lede/package/luci-app-adguardhome && git pull \
+cd ~/lede && git pull
+cd ~/lede/package/OpenClash && git pull
+cd ~/lede/package/luci-app-adguardhome && git pull
 cd ~/lede/package/lean/luci-theme-argon-18.06 && git pull
 
 # 然后就可以向上面一样愉快的编译与云编译了
