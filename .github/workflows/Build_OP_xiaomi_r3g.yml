@@ -72,10 +72,8 @@ jobs:
         ./scripts/feeds install -a
         ./scripts/feeds install -a
         
-    - name: Import external feeds - openclash
-      working-directory: ./openwrt
-      run: |
-        git clone https://github.com/vernesong/OpenClash.git package/openclash
+
+
     
     - name: Import external feeds - luci-app-adguardhome
       working-directory: ./openwrt
