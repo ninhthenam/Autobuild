@@ -94,7 +94,7 @@ jobs:
 
     - name: Configuration Customization - Build_xiaomi_r3g
       env:
-        CONFIG_FILE: 'xiaomi_r3g.config'
+        CONFIG_FILE: '3g.config'
         BANNER_FILE: 'banner'
       run: |
         [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
